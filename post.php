@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post</title>
+</head>
+<body>
+    
+    <h1 align="center">Webboard kakkak02(lab02)</h1>
+    <hr> <!-- ขีด -->
+    <br> <!-- บรรทัดใหม่ -->
+
+    <div align ="center">
+        ต้องการดูกระทู้หมายเลย <?php echo $_GET["id"]; ?> <br><br>
+        
+        <table style="border:2px solid black ; width:40%" align="center">
+        
+        <tr><td style="background-color:#6CD2FE; text-align : center" > 
+           แสดงความคิดเห็น
+        </td></tr>
+
+        <tr><td><textarea name="" id="" cols="40" rows="3"></textarea></td></tr>
+
+        <tr><td align="center"><input type="submit" value="ส่งข้อความ" ></td></tr>
+
+        </table>
+    </div>
+
+    <br>
+    <div align="center"><a href="index.html"> กลับไปยังหน้าหลัก </a></div>
+
+</body>
+</html>
