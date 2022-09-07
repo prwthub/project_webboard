@@ -12,8 +12,19 @@
     <br> <!-- บรรทัดใหม่ -->
 
     <div align ="center">
-        ต้องการดูกระทู้หมายเลย <?php echo $_GET["id"]; ?> <br><br>
+        ต้องการดูกระทู้หมายเลย <?php echo $_GET["id"]; ?> <br>
         
+        <?php
+            $id = $_GET["id"];
+            if($id % 2 == 0){
+                echo "เป็นกระทู้หมายเลขคู่";
+            }
+            else{
+                echo "เป็นกระทู้หมายเลขคี่";
+            }
+        ?>
+        <br> <br>
+
         <table style="border:2px solid black ; width:40%" align="center">
         
         <tr><td style="background-color:#6CD2FE; text-align : center" > 
@@ -28,7 +39,7 @@
     </div>
 
     <br>
-    <div align="center"><a href="index.html"> กลับไปยังหน้าหลัก </a></div>
+    <div align="center"><a href="index.php"> กลับไปยังหน้าหลัก </a></div>
 
 </body>
 </html>

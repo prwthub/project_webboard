@@ -11,12 +11,25 @@
     <hr> <!-- ขีด -->
     <br> <!-- บรรทัดใหม่ -->
 
-    <div align ="center">
-        เข้าสู่ระบบด้วย <br>
-        username : <?php echo $_POST["user"]; ?> <br>
-        password : <?php echo $_POST["pass"]; ?> <br>
-    </div>
+    <div align = "center">
+        <?php
+            $user = $_POST["user"];
+            $pass = $_POST["pass"];
 
+            if($user == "admin" && $pass == "ad1234"){
+                echo "ยินดีต้อนรับ ADMIN";
+            }
+            elseif($user == "member" && $pass == "mem1234"){
+                echo "ยินดีต้อนรับ MEMBER";
+            }
+            else{
+                echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง";
+            }
+
+        ?>
+        <br>
+        <a href="index.php">กลับสู่หน้าหลัก</a>
+    </div>
 
 </body>
 </html>
