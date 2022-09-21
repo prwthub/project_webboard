@@ -8,7 +8,7 @@
     <style>
         span{
             background:skyblue;
-            ont:12pt tahoma;
+            font:12pt tahoma;
             color: crimson;
             margin:5px;
             display:block;

@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION["id"])){
+        header("location:index.php");
+        die();
+    }
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,9 +14,9 @@
 </head>
 <body>
     
-    <h1 align="center">Webboard kakkak02(lab02)</h1>
-    <hr> <!-- ขีด -->
-    <br> <!-- บรรทัดใหม่ -->
+    <h1 align="center">Webboard kakkak</h1>
+    <hr>
+    <br> 
 
     <div align = "center">
         <?php
@@ -18,9 +25,16 @@
 
             if($user == "admin" && $pass == "ad1234"){
                 echo "ยินดีต้อนรับ ADMIN";
+                $_SESSION['username'] = "admin";
+                $_SESSION['role'] = "a";
+                $_SESSION['id'] = "session_id()";
+
             }
             elseif($user == "member" && $pass == "mem1234"){
                 echo "ยินดีต้อนรับ MEMBER";
+                $_SESSION['username'] = "member";
+                $_SESSION['role'] = "m";
+                $_SESSION['id'] = "session_id()";
             }
             else{
                 echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง";

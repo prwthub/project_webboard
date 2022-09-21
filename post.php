@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <h1 align="center">Webboard kakkak02(lab02)</h1>
+    <h1 align="center">Webboard kakkak</h1>
     <hr> <!-- ขีด -->
     <br> <!-- บรรทัดใหม่ -->
 
