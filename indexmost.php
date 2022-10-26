@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webboard</title>
-    <!-- icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -20,28 +19,27 @@
 ?>
 <body>
     <div class="container">
-        <h1><center>Webboard kakkak</center></h1>
-        <?php include "nav.php"; ?>
-        <br>
-        
-        <div class="d-flex">
-            <div>
-                <label>หมวดหมู่</label>
-                <span class="btn btn-light dropdown-toggle btn-sm" type="button" id="button2" data-bs-toggle="dropdown" aria-expanded="false">--ทั้งหมด--</span>
-                <ul class="dropdown-menu" aria-labelledly="flase">
-                    <li><a href="#" class="dropdown-item">ทั้งหมด</a></li>
-                    <li><a href="#" class="dropdown-item">เรื่องเรียน</a></li>
-                    <li><a href="#" class="dropdown-item">เรื่องทั่วไป</a></li>
-                </ul>
-            </div>
+    <h1 style="text-align: center;">Webboard</h1>
+    <?php include "nav.php"; ?>
+    <br>
+    <div class="d-flex">
+        <div>
+            <label>หมวดหมู่</label>
+            <span class="btn btn-light dropdown-toggle btn-sm" type="button" id="button2" data-bs-toggle="dropdown" aria-expanded="false">--ทั้งหมด--</span>
+            <ul class="dropdown-menu" aria-labelledly="flase">
+                <li><a href="#" class="dropdown-item">ทั้งหมด</a></li>
+                <li><a href="#" class="dropdown-item">เรื่องเรียน</a></li>
+                <li><a href="#" class="dropdown-item">เรื่องทั่วไป</a></li>
+            </ul>
         </div>
-        <table class="table table-striped">
-            <?php 
-                for($i=1;$i<=10;$i++){
-                    echo "<tr><td><a href=post.php?id=$i style=text-decoration:none>กระทู้ $i </a></td></tr>";
-                }
-            ?>
-        </table>
+    </div>
+    <table class="table table-striped">
+        <?php 
+            for($i=1;$i<=10;$i++){
+                echo "<tr><td><a href=post.php?id=$i style=text-decoration:none>กระทู้ $i </a></td></tr>";
+            }
+        ?>
+    </table>
     </div>
 </body>
 <?php
