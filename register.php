@@ -22,7 +22,7 @@
 </head>
 <body>
     <div class="container">
-        <h1><center>Webboard kakkak</center></h1>
+        <h1><center>Webboard</center></h1>
         <?php include "nav.php" ?>
         <br>
         
@@ -31,7 +31,18 @@
         <div class="row">
             <div class="col-md-3"></div>
 
+            
             <div class="col-md-6">
+                <?php
+                    if(isset($_SESSION["add_login"])){
+                        if(($_SESSION["add_login"]) == "error"){
+                            echo "<div class='alert alert-danger'><i class='bi bi-exclamation-circle-fill'></i>  ชื่อบัญชีมีการใช้งานแล้ว</div>";
+                        }else{
+                            echo "<div class='alert alert-success'><i class='bi bi-check-circle-fill'></i>  สมัครสมาชิกสำเร็จแล้ว</div>";
+                        }
+                    }
+                    unset($_SESSION["add_login"]);
+                ?>
                 <div class="card text-dark bg-light border-primary">
                     <div class="card-header bg-primary text-white"><i class="bi bi-box-arrow-in-right"></i>&nbsp;&nbsp;กรอกข้อมูล</div>
                     <div class="card-body">
