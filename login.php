@@ -52,6 +52,7 @@
             <div class="col-md-4"></div>
             
             <div class="col-md-4">
+                <form action="verify.php" method="POST">
                 <?php
                     // ถ้ามี session มาจะมีการแสดงผล
                     if(isset($_SESSION["error"])){
@@ -62,16 +63,15 @@
                 ?>
                 <div class="card text-dark bg-light">
                     <div class="card-header">เข้าสู่ระบบ</div>
-                    <div class="card-body">
-                        <form action="verify.php" method="POST">
+                        <div class="card-body">
                             <div class="form-group mb-2">
                                 <label class="form-label">username</label>
-                                <input type="text" name="login" class="form-control">
+                                <input type="text" name="username" class="form-control" required>
                             </div>
                             <div class="form-group mb-2">
                                 <label class="form-label">password</label>
                                 <div class="input-group">
-                                    <input type="password" name="password" class="form-control" id="pwd">
+                                    <input type="password" name="password" class="form-control" id="pwd" required>
                                     <span class="input-group-text" onclick="password_show_hide();">
                                         <i class="bi bi-eye-fill" id="show_eye"></i>
                                         <i class="bi bi-eye-slash-fill d-none" id="hide_eye"></i>
@@ -79,9 +79,9 @@
                                 </div>
                             </div>
                             <center><button type="submit" class="btn btn-secondary btn-sm mt-3">Login</button></center>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
             
             <div class="col-md-4"></div>

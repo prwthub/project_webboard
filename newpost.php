@@ -20,19 +20,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <div class="contrainer">
+    <div class="container">
+        
         <h1><center>Webboard</center></h1>
         <?php include "nav.php" ?>
         <br>
-        
-        <!--
-        <?php
-            $wel = $_SESSION['username'];
-            echo "ผู้ใช้งานระบบ : $wel <br>"; 
-            //echo "ผู้ใช้งานระบบ : $_SESSION[username]";
-        ?>
-        -->
 
         <div class="row">
             <div class="col-md-3"></div>
@@ -46,8 +38,18 @@
                                 <label class="col-lg-3 col-form-label">หมวดหมู่ :</label>
                                 <div class="col-lg-9">
                                     <select name="category" class="form-select">
+                                    <!--
                                         <option value="general">เรื่องทั่วไป</option>
                                         <option value="study">เรื่องเรียน</option>
+                                    -->
+                                        <?php
+                                            $conn = new PDO("mysql:host=localhost;dbname=webboard;charset=utf8","root","");
+                                            $sql = "SELECT * FROM category";
+                                            foreach($conn->query($sql) as $row){
+                                                echo "<option value=".$row['id'].">".$row['name']."</option>";
+                                            }
+                                            $conn = null;
+                                        ?>
                                     </select>
                                 </div>
                             </div>
@@ -67,7 +69,8 @@
                                 <div class="col-lg-12">
                                     <center>
                                         <button type="submit" class="btn btn-info btn-sm text-white">
-                                        <i class="bi bi-caret-right-square me-1"></i>บันทึกข้อความ</button>
+                                            <i class="bi bi-caret-right-square me-1"></i>บันทึกข้อความ
+                                        </button>
                                     </center>
                                 </div>
                             </div>
