@@ -59,6 +59,8 @@
                 </span>
             </div>
         </div>
+        <br>
+        
         <table class="table table-striped">
             <?php
                 $conn = new PDO("mysql:host=localhost;dbname=webboard;charset=utf8","root","");
@@ -143,20 +145,11 @@
                         echo "</td><td><a href=\"delete.php?id=".$row['0']."\" class=\"btn btn-danger bi bi-trash\" onclick='return myFunction1();'></a>";
                         
                     }
-                    echo "</td></tr>";   
+                    echo "</td></tr>"; 
                     }
                 }
                 $conn = null;
             ?>
-            <!--       
-                for($i=1;$i<=10;$i++){ 
-                    echo "<tr><td><a href=\"post.php?id=$i\" style=text-decoration:none>กระทู้ที่ $i</a>";
-                    if($_SESSION["role"] == "a"){
-                        echo "</td><td><a href=\"delete.php?id=$i\" class=\"btn btn-danger bi bi-trash\" onclick='return myFunction1();'></a>";
-                        echo "</td></tr>";
-                    }
-                } 
-            -->
         </table>
     </div>
 </body>
