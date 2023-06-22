@@ -12,18 +12,18 @@
 
 ### หน้า login 
 
-![Alt text](.\webboard\example_pic\ex1.png)
+![Alt text](.\example_pic\ex1.png)
 
 ### หน้า register 
 
-![Alt text](.\webboard\example_pic\ex2.png)
+![Alt text](.\example_pic\ex2.png)
 
 ### หน้าหลักของ webboard
 
-![Alt text](.\webboard\example_pic\ex3.png)
+![Alt text](.\example_pic\ex3.png)
 
 ### ภายในโพสต์ต่างๆ 
 
-![Alt text](.\webboard\example_pic\ex4.png)
+![Alt text](.\example_pic\ex4.png)
 
 
