@@ -10,20 +10,20 @@
 <br><br>
 
 
-### หน้า login 
+## หน้า login 
 
-![Alt text](.\example_pic\ex1.png)
+![Alt text](./example/ex1.png)
 
-### หน้า register 
+## หน้า register 
 
-![Alt text](.\example_pic\ex2.png)
+![Alt text](./example/ex2.png)
 
-### หน้าหลักของ webboard
+## หน้าหลักของ webboard
 
-![Alt text](.\example_pic\ex3.png)
+![Alt text](./example/ex3.png)
 
-### ภายในโพสต์ต่างๆ 
+## ภายในโพสต์ต่างๆ 
 
-![Alt text](.\example_pic\ex4.png)
+![Alt text](./example/ex4.png)
 
 
