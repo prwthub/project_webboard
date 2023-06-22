@@ -28,7 +28,8 @@
                 <?php
                     $id = $_GET["id"];
                     
-                    $conn = new PDO("mysql:host=localhost;dbname=webboard;charset=utf8","root","");
+                    $conn = new PDO("mysql:host=localhost; dbname=webboard; charset=utf8" , "root" , "");
+                    
                     $sql = "SELECT * FROM post where id=$id";
                     $query = $conn->query($sql);
                     $result = $query->fetch(PDO::FETCH_ASSOC);
@@ -41,7 +42,7 @@
                     echo $title;
                 ?>
             </div>
-            <div class ="card-body">
+            <div class ="card-body"> 
                 <?php
                     //SELECT u.login FROM user u,post p WHERE u.id = p.user_id ;
                     $sql = "SELECT u.login FROM user u,post p WHERE u.id = p.user_id and p.id = $id";
